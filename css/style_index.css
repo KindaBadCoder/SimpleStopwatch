@@ -1,199 +1,122 @@
-/* Navbar ------------------------------------------------ */
+/* Navbar ---------------------------------------------------------- */
 
 .collapse.navbar-collapse {
      background: rgb(255, 255, 255);
-     background-image: initial;
-     background-position-x: initial;
-     background-position-y: initial;
-     background-size: initial;
-     background-repeat-x: initial;
-     background-repeat-y: initial;
-     background-attachment: initial;
-     background-origin: initial;
-     background-clip: initial;
-     background-color: rgb(255, 255, 255);
 }
- .nav-link.active {
-     padding: 8px 8px 8px 8px;
-     margin: 0 25px 0 25px;
-     padding-top: 8px;
-     padding-right: 8px;
-     padding-bottom: 8px;
-     padding-left: 8px;
-     margin-top: 0px;
-     margin-right: 25px;
-     margin-bottom: 0px;
-     margin-left: 25px;
+.nav-link {
+    padding: 8px 8px 8px 8px;
+    margin: 0 25px 0 25px;
 }
- .nav-link {
-     margin: 0 25px 0 25px;
-     margin-top: 0px;
-     margin-right: 25px;
-     margin-bottom: 0px;
-     margin-left: 25px;
+
+/* Timer Section ---------------------------------------------------- */
+
+#hero {
+    position: relative;
+    margin: 0px;
+    padding: 103px 0 100px 0;
 }
- .navbar-nav.mx-auto.mb-2.mb-lg-0 {
-     margin: 0 0 0 0;
-     margin-top: 0px;
-     margin-right: 0px;
-     margin-bottom: 0px;
-     margin-left: 0px;
+
+.whollyCentered {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
- .d-flex {
-     padding: 132px 0 100px 0;
+
+#ifcukTitle {
+    padding: 10px 10px 10px 10px;
+    margin: 0 0 17px 0;
+    text-align: left;
+    font-size: 41.6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
 }
- .active {
-     margin: 0 0 0 0;
-     margin-top: 0px;
-     margin-right: 0px;
-     margin-bottom: 0px;
-     margin-left: 0px;
+
+#timerBox {
+    width: 65%;
+    height: auto;
+    background: rgb(255, 255, 255);
+    border-radius: 20px 20px 20px 20px;
+    opacity: 1;
 }
- #hero .background-wave {
+
+/* .timerBox {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr 0.65fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    place-items:  center;????????????
+    }
+    
+    .div1 { grid-area: 1 / 3 / 2 / 6; }
+    .div2 { grid-area: 2 / 2 / 3 / 6; }
+    .div3 { grid-area: 2 / 6 / 3 / 7; } */
+
+#clock {
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 125px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+#startButtonDiv {
+    display: flex;
+    margin: 0 20px 30px 0;
+    width: 50%;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    align-self: auto;
+    gap: 10px;
+}
+
+#focusModeDiv {
+    margin: 0 0 30px 0;
+    width: auto;
+    justify-content: center;
+    align-self: center;
+}
+
+#focus {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+button {
+    display: block;
+   /* make best button */
+   /* make a pastel green background that is good on the eyes*/
+    background: #b3e5fc;
+   /* matching border */
+    border: 1px solid #99c6dc;
+    border-radius: 20px;
+    color: #333;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 20px 30px;
+    transition: all 0.2s ease-in-out;
+   /* fill flex parent */
+    width: 100%;
+}
+/* make button scale 1.1 */
+button:hover {
+    transform: scale(1.045);
+}
+
+ .background-wave {
      position: absolute;
      top: 340px;
      left: 0px;
      width: 100%;
      height: 600px;
      z-index: -1;
-}
- #hero .hero-image {
-     max-width: 600px;
-}
- #hero .hero-image img {
-     width: 100%;
-}
- .background-wave {
-     position: absolute;
      flex-direction: row;
      justify-content: flex-start;
-}
- .timerBox {
-     border: 0 #212529 rgb(33, 37, 41);
-     width: 65%;
-     height: auto;
-     background: rgb(255, 255, 255);
-     border-radius: 20px 20px 20px 20px;
-     opacity: 1;
-     background-image: initial;
-     background-position-x: initial;
-     background-position-y: initial;
-     background-size: initial;
-     background-repeat-x: initial;
-     background-repeat-y: initial;
-     background-attachment: initial;
-     background-origin: initial;
-     background-clip: initial;
-     background-color: rgb(255, 255, 255);
-     border-top-left-radius: 20px;
-     border-top-right-radius: 20px;
-     border-bottom-right-radius: 20px;
-     border-bottom-left-radius: 20px;
-}
- .d-flex.flex-column.align-items-center.justify-content-center {
-     display: flex;
-}
- .row {
-     margin: 0 35px 0 35px;
-     margin-top: 0px;
-     margin-right: 35px;
-     margin-bottom: 0px;
-     margin-left: 35px;
-}
- .flex-column {
-     padding: 118px 0 100px 0;
-     padding-top: 128px;
-     padding-right: 0px;
-     padding-bottom: 100px;
-     padding-left: 0px;
-     margin: 0 0 0 0;
-}
- #hero {
-     position: relative;
-     margin-top: 0px;
-     margin-right: 0px;
-     margin-bottom: 31px;
-     margin-left: 0px;
-     padding: 103px 0 100px 0;
-}
- #ibgy4 {
-     padding-top: 5px;
-     padding-right: 10px;
-     padding-bottom: 5px;
-     padding-left: 10px;
-     text-align: center;
-     line-height: 200px;
-     font-size: 125px;
-     text-decoration-line: none;
-     text-decoration-thickness: initial;
-     text-decoration-style: initial;
-     text-decoration-color: initial;
-     font-family: Arial, Helvetica, sans-serif;
-     font-weight: 900;
-}
- #ijc0v {
-     display: flex;
-     width: auto;
-     height: 90px;
-     justify-content: center;
-     align-self: center;
-     margin-top: 0px;
-     margin-right: 0px;
-     margin-bottom: 0px;
-     margin-left: 20px;
-}
- #i6xrj {
-     padding-top: 10px;
-     padding-right: 10px;
-     padding-bottom: 10px;
-     padding-left: 10px;
-     width: auto;
-     align-items: center;
-     align-self: center;
-}
- #ipawt {
-     padding-top: 10px;
-     padding-right: 10px;
-     padding-bottom: 10px;
-     padding-left: 10px;
-}
- #ifcuk {
-     padding: 10px 10px 10px 10px;
-     margin: 0 0 17px 0;
-     text-align: left;
-     font-size: 41.6px;
-     font-family: Arial, Helvetica, sans-serif;
-     font-weight: 400;
-}
- button {
-     display: block;
-    /* make best button */
-    /* make a pastel green background that is good on the eyes*/
-     background: #b3e5fc;
-    /* matching border */
-     border: 1px solid #99c6dc;
-     border-radius: 20px;
-     color: #333;
-     cursor: pointer;
-     font-size: 1em;
-     font-weight: 400;
-     line-height: 1.5;
-     padding: 20px 30px;
-     transition: all 0.2s ease-in-out;
-    /* fill flex parent */
-     width: 100%;
-}
-/* make button scale 1.1 */
- button:hover {
-     transform: scale(1.045);
-}
- #startButtonDiv {
-     display: flex;
-     margin: 0 20px 30px 0;
-     width: 50%;
-     height: 90px;
-     align-items: center;
-     justify-content: center;
-     align-self: auto;
-     gap: 10px;
 }
