@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     let milisecond = 0;
     let interval = null;
-    let timer = document.querySelector('#ibgy4');
+    let timer = document.querySelector('#clock');
     let paused = true;
     timer.textContent = '00:00';
     document.querySelector('#reset').addEventListener('click', () => {
