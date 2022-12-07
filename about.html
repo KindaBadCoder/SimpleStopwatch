@@ -1,38 +1,87 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SimpleStopwatch</title>
-        <meta name="title" content="SimpleStopwatch">
-        <meta name="description" content="Just another simple Stopwatch">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/font-awesome-line-awesome/css/all.min.css" />
-        
-        <link rel="stylesheet" href="css/global.css" />
-        <link rel="stylesheet" href="css/style.css" />
-    <body>
-        <nav id="ibh6" class="navbar navbar-expand-lg navbar-light bg-light"><div id="navbarSupportedContent" class="collapse navbar-collapse"><ul id="iznu" class="navbar-nav mx-auto mb-2 mb-lg-0"><a aria-current="page" href="#" id="ip9nh" class="nav-link">Home</a><a href="#" class="nav-link active">About</a><a href="#" class="nav-link">Settings</a></ul></div></nav><section id="hero" class="d-flex flex-column align-items-center justify-content-center pt-4"><h2 class="hero-title display-2 mt-5">about
-	<a href="" id="ie1g5" class="link"></a></h2><p class="hero-subtitle display-6">What is SimpleStopwatch?
-  </p></section><!-- Button trigger modal --><!-- Modal --><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="i3l8y"><path fill="#c9f2ff" fill-opacity="1" d="M0,64L48,85.3C96,107,192,149,288,176C384,203,480,213,576,192C672,171,768,117,864,106.7C960,96,1056,128,1152,122.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"><nav class="navbar navbar-expand-lg navbar-light bg-light">
-	</nav></path></svg><section id="idmf6" class="d-flex flex-column align-items-center justify-content-center pt-4"><div id="itoll">What is it for?
-  </div><div class="normalText">SimpleStopwatch is meant to be a productivity app that tracks how much time you are spending on certain tasks, and then reports the data back to you. Simply choose a tag to categorize how you are spending your next session, and then start the watch! When you are done, pause and click save, and the time will be automatically stored in the website&#039;s data, along with the time of day. In the evening, you can then check your statistics to see how much time you&#039;ve spent doing certain things.
-	<br/><br/>In addition, you can set goals for your target amount of time you want to spend on a certain subject per day, and SimpleStopwatch will automatically give you a grades based on how you&#039;re doing, both for that category specifically and for how well you are meeting your goals in general.
-  </div></section><section id="ic7vc" class="d-flex flex-column align-items-center justify-content-center pt-4"><div id="i983k">Anything Else?
-  </div><div class="normalText">This is a very work in progress website, so a lot of things can definitely be added. We&#039;re thinking of things like adding tasks to check off, possibly a built in timer/pomodoro timer, and maybe other things like schedules to plan out what you&#039;ll be doing. However, we obviously have to finish the bare bones of it all before going on to these aspects of the website anyway.
-  </div></section><section id="footer"><div class="container py-4" id="i2zug"><div class="row"><div class="col-md-4"><h3 id="i59yn">SimpleStopwatch
-		</h3><p id="ixl2l">Just a simple stopwatch, designed to track productivity personally.
-		</p><ul id="footlink-box"><a aria-current="page" href="#" id="i26vd" class="foot-link">Home</a><a href="#" id="i77sx" class="foot-link">About</a><a href="#" id="ixpz6" class="foot-link">Settings</a></ul></div><div class="col-md-8"><div class="col-md-4"><ul class="list-group list-group-flush"><li class="list-group-item text-uppercase"><b id="i7hsc">Contact
-				</b></li><li id="iabrk" class="list-group-item email">ezhu@college-prep.org
-			  </li><li id="it677" class="list-group-item phone">415-849-8946</li><li class="list-group-item email">jbauer@college-prep.org</li><li class="list-group-item phone">415-738-9416</li></ul></div></div></div><div id="isyia"><div class="col-12"><small id="iejal">© 2022 | SimpleStopwatch | All Rights Reserved.</small></div></div></div></section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
-        <script src="js/global.js"></script>
-        
-        <script src="js/script.js"></script>
-        <!--- generated by Gramateria -->
-        </body>
-    </html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleStopwatch</title>
+    <meta name="title" content="SimpleStopwatch">
+    <meta name="description" content="Just another simple Stopwatch">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/font-awesome-line-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  <body>
+    <nav id="ibh6" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul id="iznu" class="navbar-nav mx-auto mb-2 mb-lg-0">
+	  <a href="/SimpleStopwatch/" class="nav-link active">Home</a>
+          <a aria-current="page" href="/SimpleStopwatch/about" id="ip9nh" class="nav-link">About</a>
+          <a href="/SimpleStopwatch/settings" class="nav-link active">Settings</a>
+        </ul>
+      </div>
+    </nav>
+    <section id="hero" class="d-flex flex-column align-items-center justify-content-center pt-4">
+      <h2 class="hero-title display-2 mt-5">about <a href="" id="ie1g5" class="link"></a>
+      </h2>
+      <p class="hero-subtitle display-6">What is SimpleStopwatch? </p>
+    </section>
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="i3l8y">
+      <path fill="#c9f2ff" fill-opacity="1" d="M0,64L48,85.3C96,107,192,149,288,176C384,203,480,213,576,192C672,171,768,117,864,106.7C960,96,1056,128,1152,122.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+      </path>
+    </svg>
+    <section id="idmf6" class="d-flex flex-column align-items-center justify-content-center pt-4">
+      <div id="itoll">What is it for? </div>
+      <div class="normalText">SimpleStopwatch is meant to be a productivity app that tracks how much time you are spending on certain tasks, and then reports the data back to you. Simply choose a tag to categorize how you are spending your next session, and then start the watch! When you are done, pause and click save, and the time will be automatically stored in the website&#039;s data, along with the time of day. In the evening, you can then check your statistics to see how much time you&#039;ve spent doing certain things. <br />
+        <br />In addition, you can set goals for your target amount of time you want to spend on a certain subject per day, and SimpleStopwatch will automatically give you a grades based on how you&#039;re doing, both for that category specifically and for how well you are meeting your goals in general.
+      </div>
+    </section>
+    <section id="ic7vc" class="d-flex flex-column align-items-center justify-content-center pt-4">
+      <div id="i983k">Anything Else? </div>
+      <div class="normalText">This is a very work in progress website, so a lot of things can definitely be added. We&#039;re thinking of things like adding tasks to check off, possibly a built in timer/pomodoro timer, and maybe other things like schedules to plan out what you&#039;ll be doing. However, we obviously have to finish the bare bones of it all before going on to these aspects of the website anyway. </div>
+    </section>
+    <section id="footer">
+      <div class="container py-4" id="i2zug">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 id="i59yn">SimpleStopwatch </h3>
+            <p id="ixl2l">Just a simple stopwatch, designed to track productivity personally. </p>
+            <ul id="footlink-box">
+              <a aria-current="page" href="#" id="i26vd" class="foot-link">Home</a>
+              <a href="#" id="i77sx" class="foot-link">About</a>
+              <a href="#" id="ixpz6" class="foot-link">Settings</a>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="col-md-4">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item text-uppercase">
+                  <b id="i7hsc">Contact </b>
+                </li>
+                <li id="iabrk" class="list-group-item email">ezhu@college-prep.org </li>
+                <li id="it677" class="list-group-item phone">415-849-8946</li>
+                <li class="list-group-item email">jbauer@college-prep.org</li>
+                <li class="list-group-item phone">415-738-9416</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="isyia">
+          <div class="col-12">
+            <small id="iejal">© 2022 | SimpleStopwatch | All Rights Reserved.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/script.js"></script>
+    <!--- generated by Gramateria -->
+  </body>
+</html>
