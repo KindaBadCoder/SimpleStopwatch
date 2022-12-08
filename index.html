@@ -32,16 +32,43 @@
         <b>SimpleStopwatch</b>
       </div>
       <div id="timerBox">
-        <div id="clock">00:00</div>
-        <div class="row justify-content-center">
-          <div id="startButtonDiv">
+        <div id="clock" class="clockGrid">00:00</div>
+          <div id="startButtonDiv" class="startGrid">
             <button id="pause">Start</button>
             <button id="reset" style="display:none">Reset</button>
           </div>
-          <div id="focusModeDiv">
+          <div id="focusModeDiv" class="focusGrid">
             <div id="focus">focus mode</div>
           </div>
-        </div>
+
+          <div class="clockStatusGrid" style="transform: scale(0.5);">
+            <svg id="hourglassSVG" width="73px" height="88px" viewBox="0 0 73 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="hourglass">
+                <path d="M 63 86 C 63 84.7406 63 83.4708 63 82 C 63 65 56.5 50 47.2 44 C 56.5 37 63 24 63 6 C 63 4.5292 63 3.2594 63 2 L 10 2 C 10 3.2594 10 4.5292 10 6 C 10 24 16.5 37 25.8 44 C 16.5 50 10 66 10 82 C 10 83.4708 10 84.7406 10 86 L 63 86 Z" id="glass" fill="#ECF1F6"></path>
+                <rect id="top-plate" fill="#4D4544" x="0" y="0" width="73" height="8" rx="2"></rect>
+                <rect id="bottom-plate" fill="#4D4544" x="0" y="80" width="73" height="8" rx="2"></rect>
+          
+                <g id="top-sand" transform="translate(17.5, 21)">
+                  <clipPath id="top-clip-path" fill="white">
+                    <rect x="0" y="0" width="38" height="21"></rect>
+                  </clipPath>
+          
+                  <path fill="#F5A623" clip-path="url(#top-clip-path)" d="M38,0 C36.218769,7.51704545 24.818769,21 19,21 C13.418769,21 1.9,7.63636364 0,0 L38,0 Z"></path>
+                </g>
+          
+                <g id="bottom-sand" transform="translate(17.5, 55)">
+                  <clipPath id="bottom-clip-path" fill="white">
+                    <rect x="0" y="0" width="38" height="21"></rect>
+                  </clipPath>
+
+                  <g clip-path="url(#bottom-clip-path)">
+                    <path fill="#F5A623" d="M0,21 L38,21 C36.1,13.3636364 24.581231,0 19,0 C13.181231,0 1.781231,13.4829545 0,21 Z"></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+
       </div>
       <svg width="1440" height="386" xmlns="http://www.w3.org/2000/svg" class="background-wave">
         <g fill="#09F" fill-rule="nonzero" fill-opacity=".2">

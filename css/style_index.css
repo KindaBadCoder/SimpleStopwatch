@@ -1,122 +1,197 @@
 /* Navbar ---------------------------------------------------------- */
 
 .collapse.navbar-collapse {
-     background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 .nav-link {
-    padding: 8px 8px 8px 8px;
-    margin: 0 25px 0 25px;
+  padding: 8px 8px 8px 8px;
+  margin: 0 25px 0 25px;
 }
 
 /* Timer Section ---------------------------------------------------- */
 
 #hero {
-    position: relative;
-    margin: 0px;
-    padding: 103px 0 100px 0;
+  position: relative;
+  margin: 0px;
+  padding: 103px 0 100px 0;
 }
 
 .whollyCentered {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #ifcukTitle {
-    padding: 10px 10px 10px 10px;
-    margin: 0 0 17px 0;
-    text-align: left;
-    font-size: 41.6px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
+  padding: 10px 10px 10px 10px;
+  margin: 0 0 17px 0;
+  text-align: left;
+  font-size: 41.6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }
 
 #timerBox {
-    width: 65%;
-    height: auto;
-    background: rgb(255, 255, 255);
-    border-radius: 20px 20px 20px 20px;
-    opacity: 1;
+  width: 65%;
+  height: auto;
+  background: rgb(255, 255, 255);
+  border-radius: 20px 20px 20px 20px;
+  opacity: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 0.65fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  place-items: center;
 }
 
-/* .timerBox {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 1fr 0.65fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    place-items:  center;????????????
-    }
-    
-    .div1 { grid-area: 1 / 3 / 2 / 6; }
-    .div2 { grid-area: 2 / 2 / 3 / 6; }
-    .div3 { grid-area: 2 / 6 / 3 / 7; } */
+.clockGrid {
+  grid-area: 1 / 3 / 2 / 6;
+}
+.startGrid {
+  grid-area: 2 / 2 / 3 / 6;
+}
+.focusGrid {
+  grid-area: 2 / 6 / 3 / 7;
+}
+.clockStatusGrid {
+  grid-area: 1 / 6 / 2 / 7;
+}
 
 #clock {
-    padding: 5px 10px 5px 10px;
-    text-align: center;
-    line-height: 200px;
-    font-size: 125px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  line-height: 200px;
+  font-size: 125px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  width: 100%;
 }
 
 #startButtonDiv {
-    display: flex;
-    margin: 0 20px 30px 0;
-    width: 50%;
-    height: 90px;
-    align-items: center;
-    justify-content: center;
-    align-self: auto;
-    gap: 10px;
+  display: flex;
+  margin: 0 20px 30px 0;
+  width: 82.5%;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  align-self: auto;
+  gap: 10px;
 }
 
 #focusModeDiv {
-    margin: 0 0 30px 0;
-    width: auto;
-    justify-content: center;
-    align-self: center;
+  margin: 0 0 30px 0;
+  width: auto;
+  justify-content: center;
+  align-self: center;
 }
 
+/* can delete once you get the button sorted out */
 #focus {
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 button {
-    display: block;
-   /* make best button */
-   /* make a pastel green background that is good on the eyes*/
-    background: #b3e5fc;
-   /* matching border */
-    border: 1px solid #99c6dc;
-    border-radius: 20px;
-    color: #333;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 20px 30px;
-    transition: all 0.2s ease-in-out;
-   /* fill flex parent */
-    width: 100%;
+  display: block;
+  /* make best button */
+  /* make a pastel green background that is good on the eyes*/
+  background: #b3e5fc;
+  /* matching border */
+  border: 1px solid #99c6dc;
+  border-radius: 20px;
+  color: #333;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 20px 30px;
+  transition: all 0.2s ease-in-out;
+  /* fill flex parent */
+  width: 100%;
 }
 /* make button scale 1.1 */
 button:hover {
-    transform: scale(1.045);
+  transform: scale(1.045);
 }
 
- .background-wave {
-     position: absolute;
-     top: 340px;
-     left: 0px;
-     width: 100%;
-     height: 600px;
-     z-index: -1;
-     flex-direction: row;
-     justify-content: flex-start;
+@keyframes top-clip {
+  0% {
+  }
+  50% {
+    transform: translateY(21px);
+  }
+  100% {
+    transform: translateY(21px);
+  }
+}
+
+@keyframes bottom-sand-path {
+  0% {
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bottom-sand-g {
+  0% {
+  }
+  85% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes hourglass-rotation {
+  50% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(180deg);
+  }
+}
+
+#top-sand #top-clip-path rect,
+#bottom-sand path,
+#bottom-sand g,
+#hourglassSVG {
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-name: hourglass-rotation;
+}
+
+#top-sand #top-clip-path rect {
+  animation-name: top-clip;
+}
+
+#bottom-sand path {
+  transform: translateY(21px);
+  animation-name: bottom-sand-path;
+}
+
+#bottom-sand g {
+  animation-name: bottom-sand-g;
+}
+
+/* wave below ---------------------------------------------------- */
+
+.background-wave {
+  position: absolute;
+  top: 340px;
+  left: 0px;
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+  flex-direction: row;
+  justify-content: flex-start;
 }
