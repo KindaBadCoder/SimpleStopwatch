@@ -239,14 +239,8 @@
   padding-left: 0px;
 }
 #footer {
-  margin-top: 51px;
-  margin-right: 0px;
-  margin-bottom: 30px;
-  margin-left: 0px;
-  padding-top: 50px;
-  padding-right: 0px;
-  padding-bottom: 50px;
-  padding-left: 0px;
+  margin-top: 51px 0px 30px 0px;
+  padding-top: 50px 0px 50px 0px;
   font-size: 13px;
   padding: 10px 0 10px 0;
   margin: 51px 0 -30px 0;
@@ -287,7 +281,4 @@
 }
 .list-group-item.phone {
   padding: 0 16px 8px 28px;
-}
-#i2zug {
-  padding: 10px 12px 10px 12px;
 }
