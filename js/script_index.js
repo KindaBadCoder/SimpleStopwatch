@@ -1,8 +1,29 @@
+function save(tag) {
+  // download as JSON
+  let data = {
+    time: timer.getTimeString(),
+    date: timer.dateAtFirstStart.toISOString(),
+    tag,
+  };
+  let a = document.createElement('a');
+  a.href = URL.createObjectURL(
+    new Blob([JSON.stringify(data)], { type: 'text/plain' })
+  );
+  let fileNamePretty = `${data.date.slice(0, 10)} ${data.time} ${
+    data.tag
+  }.json`;
+  a.setAttribute('download', fileNamePretty);
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
 class Timer {
   constructor(accuracy = 100, onStartChange, onPauseChange, onTimeChange) {
     // time
     this.timeBeforeLastStart = null;
     this.lastStart = null;
+    this.dateAtFirstStart = null;
     this.interval = null;
 
     // state
@@ -27,16 +48,22 @@ class Timer {
   }
   start() {
     this.setStart(true);
+    this.dateAtFirstStart = new Date();
     this.timeBeforeLastStart = 0;
     this.unpause();
   }
   reset() {
     this.setStart(false);
+    this.dateAtFirstStart = null;
     this.timeBeforeLastStart = null;
     this.lastStart = null;
     this.setPause(null);
     clearInterval(this.interval);
     this.onTimeChange(this.getTimeString());
+  }
+  resetAndSave() {
+    save('cool tag');
+    this.reset();
   }
   unpause() {
     this.setPause(false);
@@ -99,4 +126,7 @@ document.querySelector('#pause').addEventListener('click', () => {
 });
 document.querySelector('#reset').addEventListener('click', () => {
   timer.reset();
+});
+document.querySelector('#resetAndSave').addEventListener('click', () => {
+  timer.resetAndSave();
 });
