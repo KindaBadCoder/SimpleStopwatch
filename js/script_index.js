@@ -1,3 +1,4 @@
+let allTimes = [];
 function save(tag) {
   // download as JSON
   let data = {
@@ -5,17 +6,22 @@ function save(tag) {
     date: timer.dateAtFirstStart.toISOString(),
     tag,
   };
+  allTimes.push(data);
+}
+
+function saveToJson(object) {
   let a = document.createElement('a');
   a.href = URL.createObjectURL(
-    new Blob([JSON.stringify(data)], { type: 'text/plain' })
+    new Blob([JSON.stringify(object)], { type: 'text/plain' })
   );
-  let fileNamePretty = `${data.date.slice(0, 10)} ${data.time} ${
-    data.tag
-  }.json`;
-  a.setAttribute('download', fileNamePretty);
+  a.setAttribute('download', 'data.json');
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
+}
+
+function downloadAllTimes() {
+  saveToJson(allTimes);
 }
 
 class Timer {
@@ -129,4 +135,8 @@ document.querySelector('#reset').addEventListener('click', () => {
 });
 document.querySelector('#resetAndSave').addEventListener('click', () => {
   timer.resetAndSave();
+});
+
+document.querySelector('#save').addEventListener('click', () => {
+  downloadAllTimes();
 });

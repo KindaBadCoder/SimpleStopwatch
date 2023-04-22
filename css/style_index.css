@@ -118,6 +118,9 @@ button {
 button:hover {
   transform: scale(1.045);
 }
+#save {
+  width: 100px !important;
+}
 
 @keyframes top-clip {
   0% {
